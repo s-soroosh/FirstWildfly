@@ -5,12 +5,24 @@
 <web-app>
     <display-name>Archetype Created Web Application</display-name>
     <servlet>
-        <servlet-name>TestServlet</servlet-name>
-        <servlet-class>com.sarabadani.wildfly.web.TestServlet</servlet-class>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
     </servlet>
-
+    <!--<servlet>-->
+        <!--<servlet-name>TestServlet</servlet-name>-->
+        <!--<servlet-class>com.sarabadani.wildfly.web.TestServlet</servlet-class>-->
+    <!--</servlet>-->
     <servlet-mapping>
-        <servlet-name>TestServlet</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>
+            *.jsf
+        </url-pattern>
     </servlet-mapping>
+
+
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>TestServlet</servlet-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</servlet-mapping>-->
 </web-app>
